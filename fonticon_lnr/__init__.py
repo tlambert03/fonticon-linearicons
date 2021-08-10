@@ -4,7 +4,7 @@ from pathlib import Path
 from enum import Enum
 
 
-class LinearIcons(Enum):
+class Linearicons(Enum):
     @classmethod
     def _font_file(self) -> str:
         fonts = Path(__file__).parent / "fonts"

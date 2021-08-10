@@ -1,12 +1,12 @@
 from enum import EnumMeta
 from inspect import ismethod
-import fonticon_lin
+import fonticon_lnr
 import pytest
 
 
-@pytest.mark.parametrize("attr", fonticon_lin.__all__)
+@pytest.mark.parametrize("attr", fonticon_lnr.__all__)
 def test_icons(attr):
-    fonticon = getattr(fonticon_lin, attr)
+    fonticon = getattr(fonticon_lnr, attr)
     assert isinstance(fonticon, EnumMeta)
     assert ismethod(fonticon._font_file)
     assert isinstance(fonticon._font_file(), str)
